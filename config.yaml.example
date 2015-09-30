@@ -1,0 +1,27 @@
+certificates:
+  data_bag:
+    # %s will be replaced by item
+    cert: "%s.crt"
+    key: "%s.key"
+
+keystores:
+  data_bag:
+    keystore: "%s"
+
+dkim:
+  data_bag:
+    key: "%s/key"
+    txt: "%s/txt"
+    selector: "%s/selector"
+
+ssh_keypairs:
+  data_bag:
+    keychain:
+      id_rsa: "%s/id_rsa"
+      id_rsa.pub: "%s/id_rsa.pub"
+      id_ed25519: "%s/id_ed25519"
+      id_ed25519.pub: "%s/id_ed25519.pub"
+
+# public keys are stored unencrpyted
+# knife data bag from file ssh_public_keys ssh_public_keys/*json
+# ssh_public_keys:
