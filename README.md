@@ -153,3 +153,10 @@ ssh_keypairs:
 
 See the [example config.yaml](https://github.com/chr4/pass-chef/blob/master/config.yaml.example)
 for further details.
+
+## Downsides
+
+The downside of using [pass](http://passwordstore.org) is, that the directory/ file structure of
+the stored keys is not encrypted, only the keys themselves.
+If this is an issue, do not use pass with e.g. github.com, but rather with a private repository
+hosted on a trusted server.
