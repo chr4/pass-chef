@@ -1,12 +1,8 @@
 certificates:
   data_bag:
     # %s will be replaced by item
-    cert: "%s.crt"
-    key: "%s.key"
-
-keystores:
-  data_bag:
-    keystore: "%s"
+    cert: "%s/server.crt"
+    key: "%s/server.key"
 
 dkim:
   data_bag:
