@@ -88,7 +88,7 @@ private
   # Generate a data_bag_secret using OpenSSL,
   # store it in password store as "target/data_bag_secret"
   def generate_data_bag_secret(data_bag_name, target, length=512)
-    system("#{@@pass} insert --multiline #{target}/data_bag_secret <(openssl rand -base64 #{length})")
+    system("openssl rand -base64 #{length} |#{@@pass} insert --multiline #{data_bag_name}/#{target}/data_bag_secret")
   end
 
   # Generate a passphrase,
